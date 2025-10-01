@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inknut+Antiqua:wght@400;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+US+Modern:wght@100..400&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins&family=Road+Rage&family=Roboto&family=Sora:wght@100..800&display=swap');
+
+@import "tailwindcss";
+
+:root {
+  --background: #0c0f12;
+  --foreground: #E5E7EB;
+
+  --card: #14181D;
+  --card-foreground: #E5E7EB;
+
+  --popover: #14181D;
+  --popover-foreground: #E5E7EB;
+
+  /* BUTTON */
+  --primary: #C7A569;
+  --primary-foreground: #000000;
+
+  /*TEXT*/
+  --muted: #1F242B;
+  --muted-foreground: #9CA3AF;
+
+  /* BORDER */
+  --border: #1F242B;
+  --input: #1F242B;
+  --ring: #C7A569;
+
+  /* ACCENT */
+  --accent: #C7A569;
+  --accent-foreground: #000000;
+
+  /*Fontes*/
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Marcellus", serif;
+  --font-jp: "Noto Serif JP", serif;
+}
+
+/* Aplica fonte padrão ao body */
+body {
+  font-family: var(--font-sans);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Exemplo para headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+/* Exemplo para textos japoneses */
+.jp-text {
+  font-family: var(--font-jp);
+}
+
+/* Steam Effect */
+.steam-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.steam-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: var(--steam-gradient);
+  animation: steam 3s ease-in-out infinite;
+}
+
+/* Animação de vapor */
+@keyframes steam {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(200%);
+    opacity: 1;
+  }
+}
