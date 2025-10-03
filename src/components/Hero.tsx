@@ -65,6 +65,7 @@ const Hero = ({
                     transition={{ duration: 0.8, delay: 0.6 }}
                 >
                     <Button
+                    id="menu"
                         size="lg"
                         className="bg-primary text-primary-foreground hover:bg-primary/90 font-inter font-semibold px-8 py-4 text-lg"
                     >
@@ -72,6 +73,7 @@ const Hero = ({
                     </Button>
 
                     <Button
+                    id="menu"
                         variant="secondary"
                         size="lg"
                         className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-inter font-semibold px-8 py-4 text-lg"

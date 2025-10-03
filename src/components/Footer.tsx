@@ -66,7 +66,7 @@ const Footer = () => {
                 <li key={link.name}>
                   <a
                     href={link.href}
-                    className="font-inter text-muted-foreground hover:text-primary transition-colors"
+                    className="font-inter text-muted-foreground hover:text-[#C7A569] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -87,22 +87,22 @@ const Footer = () => {
             </h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
-                <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                <MapPin className="w-5 h-5 text-[#C7A569] mt-0.5 flex-shrink-0" />
                 <span className="font-inter text-muted-foreground">
                   Rua das Flores, 123<br />
                   Vila Madalena, São Paulo
-                </span>
+                </span> 
               </div>
               
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-primary" />
+                <Phone className="w-5 h-5 text-[#C7A569]" />
                 <span className="font-inter text-muted-foreground">
                   (11) 99999-9999
                 </span>
               </div>
               
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-primary" />
+                <Mail className="w-5 h-5 text-[#C7A569]" />
                 <span className="font-inter text-muted-foreground">
                   contato@kurosushi.com
                 </span>
