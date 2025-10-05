@@ -2,6 +2,8 @@ import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Twitter } from 'lucide-react';
 import Button from './ui/Button';
 
+import LogoKuro from '../assets/LogoKuro.png'
+
 const Footer = () => {
   const socialLinks = [
     { icon: Instagram, href: '#', label: 'Instagram' },
@@ -17,7 +19,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border mt-20">
+    <footer id='contato' className="bg-card border-t border-border mt-20">
       <div className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-4 gap-8">
        
@@ -28,9 +30,8 @@ const Footer = () => {
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <h3 className="font-marcellus text-2xl font-bold text-primary mb-4">
-              Kuro Sushi
-            </h3>
+            <img src={LogoKuro} alt="logo" className="w-30" />
+            
             <p className="font-inter text-muted-foreground mb-6">
               A arte do sushi com tradição japonesa e ingredientes premium.
             </p>
@@ -75,7 +76,7 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-          {/* Contact Info */}
+      
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -110,7 +111,7 @@ const Footer = () => {
             </div>
           </motion.div>
 
-          {/* Hours */}
+        
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +133,7 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        {/* Newsletter */}
+    
         <motion.div
           className="border-t border-border pt-8 mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -162,7 +163,7 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Copyright */}
+     
         <div className="border-t border-border pt-8 mt-8 text-center">
           <p className="font-inter text-muted-foreground">
             © 2024 Kuro Sushi. Todos os direitos reservados.
