@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
 
-interface TestimonialCardProps {
+export interface TestimonialCardProps {
   name: string;
   text: string;
-  rating: number; 
+  rating: number;  
+  avatar?: string; 
 }
 
-const TestimonialCard = ({ name, text, rating }: TestimonialCardProps) => {
+const TestimonialCard = ({ name, text, rating, avatar: _avatar }: TestimonialCardProps) => {
   return (
     <motion.div
       className="bg-card border border-border rounded-2xl p-6 shadow-card hover:shadow-card-hover transition-all duration-300"
