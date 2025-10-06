@@ -20,24 +20,20 @@ const Footer = () => {
 
   return (
     <footer id='contato' className="bg-card border-t border-border mt-20">
-      <div className="container mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-8">
-       
+      <div className="container mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 space-y-8 sm:space-y-0">
           <motion.div
-            className="md:col-span-1"
+            className="md:col-span-1 flex flex-col items-center md:items-start"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
             viewport={{ once: true }}
           >
-            <img src={LogoKuro} alt="logo" className="w-30" />
-            
-            <p className="font-inter text-muted-foreground mb-6">
+            <img src={LogoKuro} alt="logo" className="w-24 sm:w-28 md:w-30 mb-4" />
+            <p className="font-inter text-muted-foreground mb-6 text-center md:text-left">
               A arte do sushi com tradição japonesa e ingredientes premium.
             </p>
-            
-            
-            <div className="flex gap-4">
+            <div className="flex gap-4 justify-center md:justify-start">
               {socialLinks.map(({ icon: Icon, href, label }) => (
                 <motion.a
                   key={label}
@@ -52,17 +48,16 @@ const Footer = () => {
             </div>
           </motion.div>
 
-      
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-marcellus text-lg font-bold text-foreground mb-6">
+            <h4 className="font-marcellus text-lg font-bold text-foreground mb-6 text-center md:text-left">
               Links Rápidos
             </h4>
-            <ul className="space-y-3">
+            <ul className="space-y-3 text-center md:text-left">
               {quickLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -76,33 +71,30 @@ const Footer = () => {
             </ul>
           </motion.div>
 
-      
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-marcellus text-lg font-bold text-foreground mb-6">
+            <h4 className="font-marcellus text-lg font-bold text-foreground mb-6 text-center md:text-left">
               Contato
             </h4>
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
+            <div className="space-y-4 text-center md:text-left">
+              <div className="flex items-start gap-3 justify-center md:justify-start">
                 <MapPin className="w-5 h-5 text-[#C7A569] mt-0.5 flex-shrink-0" />
                 <span className="font-inter text-muted-foreground">
                   Rua das Flores, 123<br />
                   Vila Madalena, São Paulo
                 </span> 
               </div>
-              
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <Phone className="w-5 h-5 text-[#C7A569]" />
                 <span className="font-inter text-muted-foreground">
                   (11) 99999-9999
                 </span>
               </div>
-              
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <Mail className="w-5 h-5 text-[#C7A569]" />
                 <span className="font-inter text-muted-foreground">
                   contato@kurosushi.com
@@ -111,18 +103,17 @@ const Footer = () => {
             </div>
           </motion.div>
 
-        
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <h4 className="font-marcellus text-lg font-bold text-foreground mb-6">
+            <h4 className="font-marcellus text-lg font-bold text-foreground mb-6 text-center md:text-left">
               Horário de Funcionamento
             </h4>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
+            <div className="space-y-3 text-center md:text-left">
+              <div className="flex items-center gap-3 justify-center md:justify-start">
                 <Clock className="w-5 h-5 text-primary" />
                 <div className="font-inter text-muted-foreground">
                   <div>Ter - Dom: 18h - 00h</div>
@@ -133,7 +124,6 @@ const Footer = () => {
           </motion.div>
         </div>
 
-    
         <motion.div
           className="border-t border-border pt-8 mt-12"
           initial={{ opacity: 0, y: 20 }}
@@ -148,22 +138,22 @@ const Footer = () => {
             <p className="font-inter text-muted-foreground mb-6 max-w-md mx-auto">
               Receba ofertas exclusivas e novidades do Kuro Sushi
             </p>
-            <div className="flex max-w-md mx-auto gap-3">
+            <div className="flex flex-col sm:flex-row max-w-md mx-auto gap-3">
               <input
                 type="email"
                 placeholder="Seu e-mail"
                 className="flex-1 px-4 py-3 bg-secondary border border-border rounded-lg font-inter text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary"
               />
               <Button 
-              variant='primary'
-              className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-inter font-medium hover:bg-primary/90 transition-colors">
+                variant='primary'
+                className="px-6 py-3 bg-primary text-primary-foreground rounded-lg font-inter font-medium hover:bg-primary/90 transition-colors w-full sm:w-auto"
+              >
                 Inscrever
               </Button>
             </div>
           </div>
         </motion.div>
 
-     
         <div className="border-t border-border pt-8 mt-8 text-center">
           <p className="font-inter text-muted-foreground">
             © 2024 Kuro Sushi. Todos os direitos reservados.
