@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 
-interface OfferCardProps {
+export interface OfferCardProps {
   image: string;
   title: string;
   description: string;
+  index?: number; // usado para calcular o delay do AOS
 }
 
-const OfferCard = ({ image, title, description }: OfferCardProps) => {
+const OfferCard = ({ image, title, description, index = 0 }: OfferCardProps) => {
   return (
     <motion.div
       className="bg-card border border-border rounded-2xl overflow-hidden shadow-card hover:shadow-card-hover transition-all duration-300 group"
@@ -15,8 +16,10 @@ const OfferCard = ({ image, title, description }: OfferCardProps) => {
       transition={{ duration: 0.4 }}
       viewport={{ once: true }}
       whileHover={{ y: -5 }}
+      data-aos="zoom-in"
+      data-aos-delay={100 * (index + 1)} // ✅ agora funciona
+      data-aos-duration="1200"
     >
-     
       <div className="aspect-[4/3] overflow-hidden relative">
         <img
           src={image}
@@ -25,12 +28,10 @@ const OfferCard = ({ image, title, description }: OfferCardProps) => {
         />
       </div>
 
-     
       <div className="p-6">
         <h3 className="font-marcellus text-xl font-bold text-foreground mb-3">
           {title}
         </h3>
-
         <p className="font-inter text-muted-foreground leading-relaxed">
           {description}
         </p>

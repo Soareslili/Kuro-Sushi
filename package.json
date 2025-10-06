@@ -12,6 +12,7 @@
   "dependencies": {
     "@tailwindcss/postcss": "^4.1.13",
     "@tailwindcss/vite": "^4.1.13",
+    "aos": "^2.3.4",
     "framer-motion": "^12.23.22",
     "lucide-react": "^0.544.0",
     "postcss": "^8.5.6",
